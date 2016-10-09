@@ -3,11 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
     <head>
         <style type="text/css">@import url(&quot;css/GameBoy.css&quot;);</style>
+		<script type="text/javascript" src="myrom.js"/>
         <script type="text/javascript">
     var DEBUG_MESSAGES = false;
     var DEBUG_WINDOWING = false;
-    window.onload = function () {
+    window.onload = function () 
+	{
         windowingInitialize();
+		
+		initPlayer();
+		start(mainCanvas, base64_decode(myrom));
+		
     }
         </script>
         <script type="text/javascript" src="js/other/windowStack.js"/>
