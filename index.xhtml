@@ -14,8 +14,32 @@
 		initPlayer();
 		start(mainCanvas, base64_decode(romdata));
 		
+		MakeCrisp = function()
+		{
+			var body = document.getElementsByTagName('body')[0];
+			body.style.backgroundImage = 'url(firefighters-training-live-fire-37543-large.jpeg)';
+			body.style["background-repeat"]= "no-repeat";
+			body.style["background-size"] = "cover";
+			
+			document.getElementById("mainCanvas").style["image-rendering"] = "-moz-crisp-edges" ;
+			document.getElementById("extra_menubar").style["visibility"] = "hidden" 
+			
+			document.getElementById("game title").style["font-size"] = "10px"
+			document.getElementById("game title").style["text-align"] = "center"
+			document.getElementById("source link").style["font-size"] = "10px" 
+			document.getElementById("source link").style["text-align"] = "center" 
+			
+			setTimeout(function(){MakeCrisp}, 1000);
+		}
+		MakeCrisp();
     }
         </script>
+		<style>
+		body 
+		{
+			background-image: firefighters-training-live-fire-37543-large.jpeg;
+		}
+		</style>
         <script type="text/javascript" src="js/other/windowStack.js"/>
         <script type="text/javascript" src="js/other/terminal.js"/>
         <script type="text/javascript" src="js/other/gui.js"/>
@@ -31,7 +55,13 @@
     </head>
     <body>
         <div id="GameBoy" class="window">
-            <div class="menubar">
+			<div class="title" id ="game title">
+				GBJAM 2015 "Burn" 
+			</div>
+			<div class="title" id ="source link">
+				source at <a href="https://github.com/ekimekim/gbjam2016"> https://github.com/ekimekim/gbjam2016</a>
+			</div>
+            <div class="menubar" id ="extra_menubar">
                 <span id="GameBoy_file_menu">File</span>
                 <span id="GameBoy_settings_menu">Settings</span>
                 <span id="GameBoy_view_menu">View</span>
