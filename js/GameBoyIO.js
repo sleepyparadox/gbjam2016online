@@ -2,10 +2,10 @@
 var gameboy = null;						//GameBoyCore object.
 var gbRunInterval = null;				//GameBoyCore Timer
 var settings = [						//Some settings.
-	true, 								//Turn on sound.
+	false, 								//Turn on sound.
 	true,								//Boot with boot ROM first?
 	false,								//Give priority to GameBoy mode
-	1,									//Volume level set.
+	0,									//Volume level set.
 	true,								//Colorize GB mode?
 	false,								//Disallow typed arrays?
 	8,									//Interval for the emulator loop.
@@ -15,7 +15,7 @@ var settings = [						//Some settings.
 	false,								//Override MBC RAM disabling and always allow reading and writing to the banks.
 	false,								//Use the GameBoy boot ROM instead of the GameBoy Color boot ROM.
 	false,								//Scale the canvas in JS, or let the browser scale the canvas?
-	true,								//Use image smoothing based scaling?
+	false,								//Use image smoothing based scaling?
     [true, true, true, true]            //User controlled channel enables.
 ];
 function start(canvas, ROM) {
